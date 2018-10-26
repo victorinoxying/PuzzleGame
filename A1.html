@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<link rel="stylesheet" type="text/css" href="A1.css">
+    	<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="A1.js"></script>
+    	<title>Assignment 1: Sliding 15 puzzle</title>
+    </head>
+    <body>
+    	<div id = "main">
+    		<ul id="menu">
+  			<li><a class="active">menu</a></li>
+  			<li><a class="move" onclick="shuffleTiles()" >shuffle</a></li>
+  			<li><a onclick="showData()">score</a></li>
+  			<li><a onclick="showHelp()">help</a></li>
+  			<li><a onclick="showTip()">tip</a></li>
+  			<li><a class="move" onclick="showResult()" >solve</a></li>
+			</ul>
+			<ul id="level">
+				<li>------Settings------</li>
+				<br>
+				<li>Size: 
+				<select onchange="go()" id="GameSize" >
+  				<option value="2">2x2</option>
+  				<option value="3">3x3</option>
+  				<option value="4">4x4</option>
+  				<option value="5">5x5</option>
+  			</select>
+			</li><br>
+			<li>Level: <select onchange="go()" id="GameLevel">
+				<option value="20">very easy</option>
+				<option value="40">very nomal</option>
+				<option value="100">hard</option>
+			</select></li><br>
+		</ul>
+			
+  			
+    	<div id="play_area"></div>
+    	<ul id="pannel">
+    		<li id="panpart"><p>------Data------</p></li>
+    		<li id="Analysis">Analysis:<br>
+				<p id="CantorNum">Cantor Number: 0</p>
+				<p id="VisitNum">Visited path: 0</p>
+			</li>
+    		<li id="step"><p>Step: 0</p></li>
+    		<li id="score"><p>Score: 0</p></li>
+    		<li id="help"><p>this is a puzzle<br>
+    			powered by victorinox<br>copyright: airvendor<br>
+    			only the four grids around the white grid can be moved<br>if the order is correct and white grid is on bottom right conner, click the white one, you win</p></li>
+    		<li id="tip"><p>Tip:</p><br><img id="img" src="picture.jpg" alt="The dick" /></li>
+    			
+    	</ul>
+    	</div>
+      
+    </body>
+</html>
